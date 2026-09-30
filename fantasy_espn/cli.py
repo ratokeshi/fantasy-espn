@@ -65,7 +65,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
 
-    if not args.league_id or not args.year:
+    if args.league_id is None or args.year is None:
         parser.error(
             "--league-id and --year are required "
             "(or set ESPN_LEAGUE_ID/ESPN_YEAR)."
