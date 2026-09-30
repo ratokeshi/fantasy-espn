@@ -1,6 +1,5 @@
 """Tests for fantasy_espn.cli."""
 
-import json
 import unittest
 from unittest.mock import patch
 

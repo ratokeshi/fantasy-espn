@@ -92,7 +92,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             result = client.get_matchups(week=args.week)
         else:  # pragma: no cover - argparse enforces valid choices
             parser.error(f"Unknown command: {args.command}")
-            return 2
     except ESPNFantasyError as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
